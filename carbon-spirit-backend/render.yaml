@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: carbon-spirit-backend
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: FLASK_DEBUG
+        value: false
+      - key: PORT
+        value: 5000
